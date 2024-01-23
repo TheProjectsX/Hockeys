@@ -4,10 +4,330 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hockey's</title>
+
+    <!-- Daisy UI and Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Manrope Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <style>
+      :root {
+        --color-primary: #ff4240;
+      }
+
+      .font-manrope {
+        font-family: "Manrope", sans-serif;
+      }
+
+      .max-screen-width {
+        max-width: 1100px;
+        margin-inline: auto;
+        padding-inline: 20px;
+      }
+
+      .section-header {
+        width: 100%;
+        padding-block: 28px;
+        border-block: 1px dashed #13131833;
+        margin-bottom: 40px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        color: #131318;
+        text-align: center;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .section-desc {
+        font-size: 1rem;
+        color: #13131899;
+        text-align: center;
+        margin-bottom: 10px;
+        max-width: 640px;
+        margin-inline: auto;
+      }
+    </style>
   </head>
-  <body>
-    <header></header>
-    <main></main>
+  <body class="font-manrope">
+    <header class="max-screen-width mb-16 pt-2 sm:pt-4">
+      <nav class="navbar p-0 mb-4">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost lg:hidden pl-0 hover:bg-transparent"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a class="text-[var(--color-primary)] font-bold">Home</a></li>
+              <li><a class="hover:text-[var(--color-primary)]">About</a></li>
+              <li><a class="hover:text-[var(--color-primary)]">Pages</a></li>
+              <li><a class="hover:text-[var(--color-primary)]">Blog</a></li>
+              <li><a class="hover:text-[var(--color-primary)]">Contact</a></li>
+              <li>
+                <a>
+                  <img
+                    src="assets/icons/search.svg"
+                    alt="Search Icon"
+                    class="w-5"
+                  />
+                  Search
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a class="text-xl sm:text-4xl font-extrabold"
+            >Hockey<span class="text-[var(--color-primary)]">’</span>s</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a class="text-[var(--color-primary)] font-bold">Home</a></li>
+            <li><a class="hover:text-[var(--color-primary)]">About</a></li>
+            <li><a class="hover:text-[var(--color-primary)]">Pages</a></li>
+            <li><a class="hover:text-[var(--color-primary)]">Blog</a></li>
+            <li><a class="hover:text-[var(--color-primary)]">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <button class="btn btn-ghost hidden lg:inline mr-2">
+            <img src="assets/icons/search.svg" alt="Search Icon" class="w-6" />
+          </button>
+          <a
+            class="btn bg-[var(--color-primary)] text-white text-lg sm:text-xl font-bold hover:text-black"
+            >Button</a
+          >
+        </div>
+      </nav>
+
+      <section class="relative">
+        <div class="carousel w-full rounded-lg">
+          <div id="slide1" class="carousel-item relative w-full">
+            <div><img src="assets/images/banner.png" class="w-full" /></div>
+            <div
+              class="absolute flex justify-center bottom-2 sm:bottom-5 space-x-4 w-full lg:w-auto lg:left-5"
+            >
+              <a
+                href="#slide4"
+                class="rounded-full p-1 sm:p-2 h-fit bg-black hover:bg-[var(--color-primary)]"
+                ><img
+                  src="assets/icons/arrow-left.svg"
+                  alt="Arrow Left"
+                  class="w-4 sm:w-5"
+              /></a>
+              <a
+                href="#slide2"
+                class="rounded-full p-1 sm:p-2 h-fit bg-black hover:bg-[var(--color-primary)]"
+                ><img
+                  src="assets/icons/arrow-right.svg"
+                  alt="Arrow Right"
+                  class="w-4 sm:w-5"
+              /></a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <div class="-scale-x-100">
+              <img src="assets/images/banner.png" class="w-full" />
+            </div>
+            <div
+              class="absolute flex justify-center bottom-2 sm:bottom-5 space-x-4 w-full lg:w-auto lg:left-5"
+            >
+              <a
+                href="#slide1"
+                class="rounded-full p-1 sm:p-2 h-fit bg-black hover:bg-[var(--color-primary)]"
+                ><img
+                  src="assets/icons/arrow-left.svg"
+                  alt="Arrow Left"
+                  class="w-4 sm:w-5"
+              /></a>
+              <a
+                href="#slide3"
+                class="rounded-full p-1 sm:p-2 h-fit bg-black hover:bg-[var(--color-primary)]"
+                ><img
+                  src="assets/icons/arrow-right.svg"
+                  alt="Arrow Right"
+                  class="w-4 sm:w-5"
+              /></a>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <div><img src="assets/images/banner.png" class="w-full" /></div>
+            <div
+              class="absolute flex justify-center bottom-2 sm:bottom-5 space-x-4 w-full lg:w-auto lg:left-5"
+            >
+              <a
+                href="#slide2"
+                class="rounded-full p-1 sm:p-2 h-fit bg-black hover:bg-[var(--color-primary)]"
+                ><img
+                  src="assets/icons/arrow-left.svg"
+                  alt="Arrow Left"
+                  class="w-4 sm:w-5"
+              /></a>
+              <a
+                href="#slide4"
+                class="rounded-full p-1 sm:p-2 h-fit bg-black hover:bg-[var(--color-primary)]"
+                ><img
+                  src="assets/icons/arrow-right.svg"
+                  alt="Arrow Right"
+                  class="w-4 sm:w-5"
+              /></a>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <div class="-scale-x-100">
+              <img src="assets/images/banner.png" class="w-full" />
+            </div>
+            <div
+              class="absolute flex justify-center bottom-2 sm:bottom-5 space-x-4 w-full lg:w-auto lg:left-5"
+            >
+              <a
+                href="#slide3"
+                class="rounded-full p-1 sm:p-2 h-fit bg-black hover:bg-[var(--color-primary)]"
+                ><img
+                  src="assets/icons/arrow-left.svg"
+                  alt="Arrow Left"
+                  class="w-4 sm:w-5"
+              /></a>
+              <a
+                href="#slide1"
+                class="rounded-full p-1 sm:p-2 h-fit bg-black hover:bg-[var(--color-primary)]"
+                ><img
+                  src="assets/icons/arrow-right.svg"
+                  alt="Arrow Right"
+                  class="w-4 sm:w-5"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="rounded-2xl bg-[#131318] p-4 sm:p-8 max-w-xl mx-auto lg:mx-0 mt-4 lg:mt-0 lg:absolute lg:right-6 lg:bottom-6"
+        >
+          <h4 class="text-white font-extrabold text-base sm:text-2xl mb-2">
+            Meet all the heroes from the field
+          </h4>
+          <p class="text-[#FFFFFF99] text-sm sm:text-base">
+            Discover the faces behind the pucks and sticks, as we introduce the
+            formidable heroes of our hockey team
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <main class="max-screen-width mb-16 space-y-16">
+      <!-- Professional Hockeys Club -->
+      <section>
+        <header class="section-header">
+          <h3 class="section-title">Professional Hockeys Club</h3>
+          <p class="section-desc">
+            Elevate your passion for the game with our elite Professional Hockey
+            Club, where skill, teamwork, and dedication converge for an
+            unforgettable sporting experience
+          </p>
+        </header>
+
+        <div
+          class="grid justify-around gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          <div class="text-center">
+            <div
+              class="radial-progress text-[#FF4240] mb-4"
+              style="--value: 87"
+              role="progressbar"
+            >
+              <span class="font-extrabold text-black">87%</span>
+            </div>
+            <h4 class="text-xl font-semibold text-[#131318] mb-2">
+              Prayer Facility
+            </h4>
+            <p class="text-[#13131899]">
+              Sacred space for reflection, meditation, and spiritual connection
+              in tranquility.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="radial-progress text-[#49D293] mb-4"
+              style="--value: 95"
+              role="progressbar"
+            >
+              <span class="font-extrabold text-black">95%</span>
+            </div>
+            <h4 class="text-xl font-semibold text-[#131318] mb-2">
+              Experienced Coach
+            </h4>
+            <p class="text-[#13131899]">
+              Seasoned mentor with a wealth of expertise, guiding athletes to
+              excellence.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="radial-progress text-[#FFB546] mb-4"
+              style="--value: 90"
+              role="progressbar"
+            >
+              <span class="font-extrabold text-black">90%</span>
+            </div>
+            <h4 class="text-xl font-semibold text-[#131318] mb-2">
+              Senior Player
+            </h4>
+            <p class="text-[#13131899]">
+              Seasoned athlete, bringing skill, leadership, and experience to
+              the team.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="radial-progress text-[#4C8DF1] mb-4"
+              style="--value: 80"
+              role="progressbar"
+            >
+              <span class="font-extrabold text-black">80%</span>
+            </div>
+            <h4 class="text-xl font-semibold text-[#131318] mb-2">
+              Training Ground
+            </h4>
+            <p class="text-[#13131899]">
+              The dedicated arena where champions are forged through rigorous
+              drills.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>
